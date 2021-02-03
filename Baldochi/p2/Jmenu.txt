@@ -1,0 +1,25 @@
+// Constrói a barra de menus
+JMenuBar mb = new JMenuBar();
+setJMenuBar(mb);
+// Constrói um menu e o adiciona a barra
+JMenu m = new JMenu("Menu", true);
+mb.add(m);
+// Cria um submenu e o adiciona 
+JMenu sm = new JMenu("Sub Menu");
+sm.setMnemonic(KeyEvent.VK_S);
+m.add(sm);       
+// Cria um item de menu e o adiciona ao submenu
+JMenuItem mi = new JMenuItem("Menu Item");
+mi.setMnemonic(KeyEvent.VK_M);
+sm.add(mi);
+// Cria um checkbox e o adiciona ao menu
+JCheckBoxMenuItem cbmi = new JCheckBoxMenuItem("Check Item");
+cbmi.setMnemonic(KeyEvent.VK_C);
+m.add(cbmi);        
+// Cria um separador entre o checkbox e o radiobutton
+JSeparator s = new JSeparator();
+m.add(s);       
+// Cria um radiobutton e o adiciona ao menu
+JRadioButtonMenuItem rbmi = new JRadioButtonMenuItem("Radio Item");
+rbmi.setMnemonic(KeyEvent.VK_R);
+m.add(rbmi);

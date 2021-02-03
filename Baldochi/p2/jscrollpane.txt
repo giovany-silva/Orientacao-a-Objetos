@@ -1,0 +1,10 @@
+Icon bigTiger = new ImageIcon("BigTiger.gif");
+JLabel tigerLabel = new JLabel(bigTiger)
+
+// Cria o scrollpane com o label
+JScrollPane scrollPane = new JScrollPane(tigerLabel,   // componente
+      JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,    // scroll vertical
+     JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); // scrollhorizontal
+
+// Adiciona o painel 
+getContentPane().add(scrollPane, BorderLayout.CENTER);

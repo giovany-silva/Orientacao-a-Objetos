@@ -1,0 +1,17 @@
+public GridLayoutDemo() {
+    // Obtém o container e seta o layout
+    Container contentPane = this.getContentPane();
+    // Duas linhas e três colunas na grade
+    contentPane.setLayout(new GridLayout(2, 3)); 
+    // Cria e adiciona os componentes        
+    contentPane.add(new JButton("1"));
+    contentPane.add(new JButton("2"));    
+    contentPane.add(new JButton("3"));
+    contentPane.add(new JButton("4"));
+    contentPane.add(new JButton("5"));
+    contentPane.add(new JButton("6"));        
+    // Seta o frame
+    setSize(240, 170);
+    setVisible(true);
+    setTitle("GridLayoutDemo");
+}

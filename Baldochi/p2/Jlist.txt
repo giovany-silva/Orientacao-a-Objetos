@@ -1,0 +1,20 @@
+// Exemplo de lista estática
+String[] data = { “Joao”, “Pedro”, “Luis”, “Hugo”, “Ricardo”, ... };
+JList staticList = new JList(data);
+// Exemplo de lista dinâmica
+listModel = new DefaultListModel();
+listModel.addElement("Jose Silva");
+listModel.addElement("Antonio Cintra");
+listModel.addElement("Ana Souza");
+// Cria a lista passando o modelo como parametro
+JList dinamicList = new JList(listModel);
+dinamicList.addListSelectionListener(this);
+...
+// Implementa a interface ListSelectionListener
+ public void valueChanged(ListSelectionEvent e) {
+        if (e.getValueIsAdjusting() == false) {
+            if (dinamicList.getSelectedIndex() != -1) {
+                int index = dinamicList.getSelectedIndex();
+                System.out.println(index);
+                listModel.remove(index);
+  } } } 

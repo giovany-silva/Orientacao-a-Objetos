@@ -1,0 +1,21 @@
+public BorderLayoutDemo() {
+    // Obtém o container e seta o layout
+    Container contentPane = this.getContentPane();
+    contentPane.setLayout(new BorderLayout());
+    // Cria os componentes
+    JButton b1 = new JButton("PAGE_START");
+    JButton b2 = new JButton("LINE_START");
+    JButton b3 = new JButton("CENTER");
+    JButton b4 = new JButton("LINE_END");
+    JButton b5 = new JButton("PAGE_END");
+    // Adiciona os componentes e define suas localizações no layout
+    contentPane.add(b1, BorderLayout.PAGE_START);
+    contentPane.add(b2, BorderLayout.LINE_START);    
+    contentPane.add(b3, BorderLayout.CENTER);
+    contentPane.add(b4, BorderLayout.LINE_END);
+    contentPane.add(b5, BorderLayout.PAGE_END);
+    // Inicializa o frame
+    setSize(240, 170);
+    setVisible(true);
+    setTitle("BorderLayoutDemo");
+}

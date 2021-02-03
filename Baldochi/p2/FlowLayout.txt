@@ -1,0 +1,18 @@
+public FlowLayoutDemo() {
+        
+    // Obtém o container e seta o layout
+    Container contentPane = this.getContentPane();
+    contentPane.setLayout(new FlowLayout());
+
+    // Adiciona componentes de diferentes tamanhos
+    contentPane.add(new JButton("Button 1"));
+    contentPane.add(new JButton("Button 2"));
+    contentPane.add(new JButton("Button 3"));
+    contentPane.add(new JButton("Long-Named Button 4"));
+    contentPane.add(new JButton("5"));
+        
+    // Inicializa o frame
+    setSize(240, 170);
+    setTitle("FlowLayoutDemo");
+    setVisible(true);
+}

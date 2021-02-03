@@ -1,0 +1,23 @@
+importjava.util.*;
+publicclassControleDisciplina
+{
+  privateArrayListlistaDisciplina = new ArrayList ();
+  privateLimiteDisciplinalimDis;	// Construtor de ControleDisciplinaControle
+  Disciplina ()
+  {
+    limDis = newLimiteDisciplina (this);
+
+  }
+
+}
+
+importjavax.swing.*;
+public
+classLimiteDisciplina ()
+{
+  ControleDisciplina ctrDisc;
+  ... public LimiteDisciplina (ControleDisciplina ctrDiscPar)
+  {
+    ctrDisc = ctrDiscPar;
+  ...}
+}

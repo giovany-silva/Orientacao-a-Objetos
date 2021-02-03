@@ -1,0 +1,18 @@
+// Define a lista de itens a serem apresentados
+String[] str1 = { "Bird", "Cat", "Dog", "Rabbit", "Pig" };
+// Cria o combo box, seleciona o índice e adiciona o listener
+JComboBox cb1 = new JComboBox(str);
+cb1.setSelectedIndex(4);
+cb1.addActionListener(this);
+// Define a lista de itens
+String[] str2 = { "dd MMMMM yyyy", dd.MM.yy", MM/dd/yy", ... };
+// Cria o combo, torna-o editável e adiciona o listener
+JComboBox cb2 = new JComboBox(str2);
+cb2.setEditable(true);
+cb2.addActionListener(this);
+// Implementa a interface ActionListener
+public void actionPerformed(ActionEvent e) {
+    JComboBox c = (JComboBox) e.getSource();
+    String item = c.getSelectedItem();
+    System.out.println("User chose " + item);
+}
