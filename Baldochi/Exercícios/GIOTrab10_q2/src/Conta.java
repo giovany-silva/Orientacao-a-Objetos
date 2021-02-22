@@ -44,15 +44,15 @@ public class Conta
     	
     	return transacoes;
     }
-    public void adicionaDeposito(double pValor,Date pData, String pSenha, String pTipo, String pNomeDep)
+    public void adicionaDeposito(double pValor,Date pData, String pNomeDep)
     {
 
-    	transacoes.add(new Deposito(pValor,pData,pSenha, pTipo, pNomeDep));
+    	transacoes.add(new Deposito(pValor,pData,pNomeDep));
 
     }
         public boolean adicionaSaque(double pValor,Date pData, String pSenha)
     {
-        if((calculaSaldo()+limite)<pValor||senha!=pSenha)return false;
+        if((calculaSaldo()+limite)<pValor)return false;
        
     	transacoes.add(new Saque(pValor,pData,pSenha));
     	return true;

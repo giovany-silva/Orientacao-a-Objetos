@@ -1,4 +1,5 @@
 import java.util.*;
+import javax.*;
 public class controleConta
 {
     ArrayList<Conta>listadeContas=new ArrayList<Conta>();
@@ -24,7 +25,7 @@ public class controleConta
         {
             
             if(c.getNroConta()==pNroConta)
-            {System.out.println("achou");
+            {
               c.adicionaSaque(pValor,pData,pSenha);    
               break;
             }
@@ -34,7 +35,7 @@ public class controleConta
         return sucessfull;//o sucessfull indica se deu certo a operacao de busca e validade de saldo
     }
     
-        public boolean realizaDeposito(int pNroConta,double pValor,Date pData,String pSenha, String pTipo, String pNomeDep)
+        public boolean realizaDeposito(int pNroConta,double pValor,Date pData, String pNomeDep)
     {
             boolean sucessfull=false;
         for(Conta c:listadeContas)
@@ -42,7 +43,7 @@ public class controleConta
             
             if(c.getNroConta()==pNroConta)
             {
-              c.adicionaDeposito(pValor,pData,pSenha, pTipo, pNomeDep);    
+              c.adicionaDeposito(pValor,pData, pNomeDep);    
                sucessfull=true;
         
               break;

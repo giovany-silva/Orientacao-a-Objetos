@@ -63,8 +63,8 @@ public class limiteConta {
 
         String nomeCorrent;
         double limiteConta;
-        String senha;
-        System.out.println("conta,nome,limite,senha");
+        
+        
 
         String nroConta = JOptionPane.showInputDialog(null, "\nConta:\n");
         NroConta = Integer.parseInt(nroConta);
@@ -74,7 +74,7 @@ public class limiteConta {
         String LimiteConta = JOptionPane.showInputDialog(null, "\nLimite:\n");
         limiteConta = Double.parseDouble(LimiteConta);
         
-        senha = JOptionPane.showInputDialog(null, "\nSenha:\n");
+        String senha = JOptionPane.showInputDialog(null, "\nSenha:\n");
         
         ctrConta.criaConta(NroConta, nomeCorrent, limiteConta, senha);
     }
@@ -88,23 +88,15 @@ public class limiteConta {
         String nroConta = JOptionPane.showInputDialog(null, "\nDigite o número da conta:\n");
         
         String valor = JOptionPane.showInputDialog(null, "\nDigite o valor:\n");
-        
-        String datarecebida = JOptionPane.showInputDialog(null, "\nDigite a data:\n");
-        
-        //SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        
-        //Date Data = format.parse(datarecebida);
+      
         
         NomeDep = JOptionPane.showInputDialog(null, "\nDigite o nome do depósito:\n");
         
         NroConta = Integer.parseInt(nroConta);
         Valor = Double.parseDouble(valor);;
         
-        String Senha = JOptionPane.showInputDialog(null, "\nDigite a senha:\n");
-
-        String Tipo = JOptionPane.showInputDialog(null, "\nDigite o tipo:\n");
         
-        if (!ctrConta.realizaDeposito(NroConta, Valor, Data, Senha, Tipo, NomeDep)) {
+        if (!ctrConta.realizaDeposito(NroConta, Valor, Data, NomeDep)) {
 
             JOptionPane.showMessageDialog(null, "\nNão foi possível realizar o depósito:\n");
 
@@ -134,7 +126,6 @@ public class limiteConta {
 
     public void fazTransferencia() {
         
-        System.out.println("Digite nro conta deb,cred ,val,Senha");
         
         String nroContadeb = JOptionPane.showInputDialog(null, "\nDigite o número da conta debitada:\n");
         int NroContadeb = Integer.parseInt(nroContadeb);
@@ -155,7 +146,6 @@ public class limiteConta {
     }
 
     public void imprimeExtrato() {
-        System.out.println("Digite nro conta ");
         
         String nroConta = JOptionPane.showInputDialog(null, "\nDigite o número da conta:\n");
         int NroConta = Integer.parseInt(nroConta);

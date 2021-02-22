@@ -1,11 +1,11 @@
 import java.util.*;
-public class Deposito extends Transferencia
+public class Deposito extends Transacao
 {
 private String nomeDep;
 
-public Deposito(double pValor ,Date pData,String pSenha, String pTipo, String pNomeDep)// a verificar
+public Deposito(double pValor ,Date pData, String pNomeDep)// a verificar
 {
-	super(pValor,pData, pSenha, pTipo);
+	super(pValor,pData);
    nomeDep=pNomeDep;
 }
 public String getNomeDep()
